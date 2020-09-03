@@ -110,30 +110,6 @@ function metabox_callback( $post, $box ) { ?>
 <?php
 }
 
-
-/*-----------------------------------------------------------------------------------*/
-/* Helpers */
-/*-----------------------------------------------------------------------------------*/
-
-/**
- * Plugin URL.
- *
- * @return string
- */
-function get_plugin_url() {
-	return plugins_url( basename( plugin_dir_path( __FILE__ ) ), basename(__FILE__) );
-}
-
-/**
- * Plugin path.
- *
- * @return string
- */
-function get_plugin_path() {
-	return untrailingslashit( plugin_dir_path( __FILE__ ) );
-}
-
-
 /*-----------------------------------------------------------------------------------*/
 /* Launch the whole plugin. */
 /*-----------------------------------------------------------------------------------*/
