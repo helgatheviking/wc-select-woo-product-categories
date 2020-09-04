@@ -15,9 +15,12 @@
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  */
 
-
-
 namespace SelectWooProductCat;
+
+
+/*-----------------------------------------------------------------------------------*/
+/* Launch the whole plugin. */
+/*-----------------------------------------------------------------------------------*/
 
 /**
  * Add hooks and filters
@@ -35,6 +38,7 @@ function init() {
 	add_action( 'add_meta_boxes', __NAMESPACE__ . '\add_meta_box' );
 
 }
+add_action( 'woocommerce_loaded', __NAMESPACE__ . '\init' );
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -109,8 +113,3 @@ function metabox_callback( $post, $box ) { ?>
 
 <?php
 }
-
-/*-----------------------------------------------------------------------------------*/
-/* Launch the whole plugin. */
-/*-----------------------------------------------------------------------------------*/
-add_action( 'woocommerce_loaded', __NAMESPACE__ . '\init' );
